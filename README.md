@@ -1,6 +1,20 @@
 # ML-TechTest
 React Dashboard (w/ Node API) Tech Test 
 
+## Backend commands
+Run these commands from the root folder.
+
+npm run start - Starts the backend development server.
+npm run build - Builds the backend app to the build/ directory.
+
+## Frontend commands
+Run these commands from the /front folder.
+
+npm run start - Starts the frontend development server.
+npm run build - Builds the frontend app to the build/front directory  
+
+##### NOTE: I put in a 'move' command in the build script, in order to move files from React's default build/ directory. If you're on OSX/Linux - change the term to 'mv', from 'move' in the build script.
+
 ## Design Notes 
 
 ### Initial Look: 
