@@ -2,6 +2,7 @@
 React Dashboard (w/ Node API) Tech Test 
 
 ## Design Notes 
+
 ### Initial Look: 
 #### CSS Variables: 
 ##### Font: 
@@ -20,3 +21,19 @@ RGB 247, 2, 1 (#f70201)
 RGB 248, 248, 248 (#f8f8f8)
 ##### Grey (2nd Text + Border colour): 
 RGB 154, 155, 161 (#9a9ba1)
+
+## API Notes 
+Express/Node; REST API with CRUD (Create, Read, Update, Delete) abilities 
+
+#### Schema: 
+ID (auto increment) - int
+Product_name - string
+Category - string
+Size - int
+Colour - string
+Status - string (or char?)
+Customers_Initials - string
+
+Potential Impovements:
+Customer_Name, or seperate forename/surname fields instead of Customers Initials (turn into intials on EndPoint, or on FE ?)
+Order # (make little pop up when hovering. In real world, probably would need this)
