@@ -1,4 +1,4 @@
-import {Server} from "./api/Server";
+import { Server } from "./api/Server";
 import express from 'express';
 
 const app = express();
