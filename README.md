@@ -2,12 +2,10 @@
 React Dashboard (w/ Node API) Tech Test 
 
 ## Design Notes 
-
 ### Initial Look: 
-#### Font: 
-Avenir / Helvetica - Uppercase and 2px-ish Letter Spacing on Status Key text - use Normal/Bold for rest
-
 #### CSS Variables: 
+##### Font: 
+Avenir / Helvetica - Uppercase and 2px-ish Letter Spacing on Status Key text - use Normal/Bold for rest
 ##### Background: 
 RGB 34, 34, 34 (#222222)
 ##### Cyan ("Ready To Try" status): 
