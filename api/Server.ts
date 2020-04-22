@@ -4,7 +4,6 @@ export class Server {
 
     private app: Express;
 
-    // initializing routes
     constructor(app: Express) {
         this.app = app;
 
