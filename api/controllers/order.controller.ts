@@ -1,15 +1,17 @@
 const Order = require('../models/order.model')
 
+
+// Create a new Order
 exports.createOne = (req, res) => {
-
+    
 };
 
-// Find a single note with a noteId
+// Retrieve all Orders
 exports.findAll = (req, res) => {
-
+    
 };
 
-// Delete a note with the specified noteId in the request
+// Delete an order with orderID
 exports.deleteOne = (req, res) => {
 
 };

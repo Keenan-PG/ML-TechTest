@@ -7,7 +7,7 @@ module.exports = (app) => {
     // Retrieve all Orders
     app.get('/orders', orders.findAll);
     
-    // Delete a Note with noteId
+    // Delete a Order with orderID
     app.delete('/orders/:orderId', orders.deleteOne);
 
 
