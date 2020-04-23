@@ -35,11 +35,16 @@ Starts the backend development server (uses nodemon for auto loading).
 ##### npm run build 
 Compiles TypeScript to JS and plots into the 'build/' directory.
 
+## Running Production
+I've set up Node to statically serve our React app at it's root directory. Meaning, you only have to run the server to get the app working! Visit the 'build/' directory within the root of your project, we'll run the commands from there.
 
+##### npm run server
+Visit localhost:8080 in your browser to see the working React/Node app! 
 
-## Design Notes 
+##### NOTE: Please only attempt to run this command if you have followed the above 'Production' steps
 
-### Initial Look: 
+## Design Notes / Initial Takeaways
+
 #### CSS Variables: 
 ##### Font: 
 Avenir / Helvetica - Uppercase and 2px-ish Letter Spacing on Status Key text - use Normal/Bold for rest
@@ -59,17 +64,26 @@ RGB 248, 248, 248 (#f8f8f8)
 RGB 154, 155, 161 (#9a9ba1)
 
 ## API Notes 
-Express/Node; REST API with CRUD (Create, Read, Update, Delete) abilities 
+Express/Node; REST API with CRUD (Create, Read, Update, Delete) abilities. Update in't in the spec, but might be worth doing anyway as it's not too much work.
 
-#### Schema: 
-ID (auto increment) - int
-Product_name - string
-Category - string
-Size - int
-Colour - string
-Status - string (or char?)
-Customers_Initials - string
+### Schema: 
+##### ID
+primary key/auto increment - int
+##### Product_name  
+string
+##### Category 
+string
+##### Size 
+int
+##### Colour 
+string
+##### Status 
+string (or char?)
+##### Customers_Initials 
+string
 
-Potential Impovements:
-Customer_Name, or seperate forename/surname fields instead of Customers Initials (turn into intials on EndPoint, or on FE ?)
-Order # (make little pop up when hovering. In real world, probably would need this)
+### Potential Impovements:
+##### Customer_Name
+Or just seperate forename/surname fields instead of Customers Initials (turn into intials on EndPoint, or on FE ?). More aligned to real life situation?
+##### Order # 
+Make little pop up when hovering? In real world, probably would need something like this
