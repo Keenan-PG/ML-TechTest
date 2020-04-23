@@ -1,4 +1,4 @@
-import {Express, Request, Response} from "express";
+import {Express, Request, Response} from "express"
 import express from "express";
 import * as path from "path";
 
@@ -9,14 +9,7 @@ export class Server {
     constructor(app: Express) {
         this.app = app;
     
-        // Express Routes (Endpoints)
-        this.app.get("/api", (req: Request, res: Response): void => {
-            res.send("Hello from the API");
-        });
-
-        this.app.get("/keenan", (req: Request, res: Response): void => {
-            res.send("Oreet naneek");
-        });
+        require('./routes/order.routes')(app);
  
         // setting front as static asset directory - express will serve from here
         this.app.use(express.static(path.resolve("./") + "/build/front/build"));
