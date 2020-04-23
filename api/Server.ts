@@ -13,11 +13,15 @@ export class Server {
         this.app.get("/api", (req: Request, res: Response): void => {
             res.send("Hello from the API");
         });
+
+        this.app.get("/keenan", (req: Request, res: Response): void => {
+            res.send("Oreet naneek");
+        });
  
         // setting front as static asset directory - express will serve from here
         this.app.use(express.static(path.resolve("./") + "/build/front/build"));
     
-        // wildcard for react app
+        // wildcard to bring any unmanaged routes to react app
         this.app.get("*", (req: Request, res: Response): void => {
             res.sendFile(path.resolve("./") + "/build/front/build/index.html");
         });
