@@ -24,8 +24,8 @@ const OrderSchema = new Schema({
         type: String,
         required: true
     },
-    age :  {
-        type: Number,
+    status : {
+        type: String,
         required: true
     },
     customer_initials :  {
