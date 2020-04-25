@@ -18,34 +18,23 @@ Fonts
 
 /* regular */
 @font-face {
-  font-family: Graphik;
-  src: url("./assets/fonts/Graphik-Regular.ttf") format("ttf");
+  font-family: Avenir;
+  src: url("./assets/fonts/AvenirLTStd-Book.otf") format("ttf");
   font-weight: normal;
+}
+
+/* medium */
+@font-face {
+  font-family: Avenir;
+  src: url("./assets/fonts/AvenirLTStd-Medium.otf") format("ttf");
+  font-weight: bold;
 }
 
 /* bold */
 @font-face {
-  font-family: Graphik;
-  src: url("./assets/fonts/Graphik-Bold.ttf") format("ttf");
-  font-weight: bold;
-}
-
-/* light */
-@font-face {
-  font-family: Graphik Light;
-  src: url("./assets/fonts/Graphik-Light.ttf") format("ttf");
-}
-
-/* extra light */
-@font-face {
-  font-family: Graphik ExtraLight;
-  src: url("./assets/fonts/Graphik-Extralight.ttf") format("ttf");
-}
-
-/* thin */
-@font-face {
-  font-family: Graphik Thin;
-  src: url("./assets/fonts/Graphik-Thin.ttf") format("ttf");
+  font-family: Avenir Bold;
+  src: url("./assets/fonts/AvenirLTStd-Roman.otf") format("ttf");
+  font-weight: bolder;
 }
 
 /* 
