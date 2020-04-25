@@ -41,56 +41,28 @@ Fonts
 Colours 
 */
 
+.cyan {
+  color: var(--primary-cyan) !important;
+}
+
 .blue {
   color: var(--primary-blue) !important;
 }
 
-.black {
-  color: var(--primary-black) !important;
+.orange {
+  color: var(--primary-orange) !important;
 }
 
-.lGrey {
-  color: var(--primary-lGrey) !important;
+.red {
+  color: var(--primary-red) !important;
 }
 
 .white {
   color: var(--primary-white) !important;
 }
 
-.red {
-  color: var(--secondary-red) !important;
-}
-
-.dGrey {
-  color: var(--secondary-dGrey) !important;
-}
-
-/* 
-BG Colours
-*/
-
-.bg-blue {
-  background-color: var(--primary-blue) !important;
-}
-
-.bg-black {
-  background-color: var(--primary-black) !important;
-}
-
-.bg-lGrey {
-  background-color: var(--primary-lGrey) !important;
-}
-
-.bg-white {
-  background-color: var(--primary-white) !important;
-}
-
-.bg-red {
-  background-color: var(--secondary-red) !important;
-}
-
-.bg-dGrey {
-  background-color: var(--secondary-dGrey) !important;
+.grey {
+  color: var(--primary-grey) !important;
 }
 
 
