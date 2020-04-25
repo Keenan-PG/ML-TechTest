@@ -55,8 +55,7 @@ exports.findAll = (req, res) => {
 exports.deleteOne = (req, res) => {
     // using mongoose method to find via ID and remove record
     const param = req.params.orderId;
-    // using .deleteOne instead of .findByIdAndRemove as i've created my own unique index in the DB (orderID)
-    Order.deleteOne({ orderID: param }).then(order => {
+    Order.findByIdAndRemove({ _id: param }).then(order => {
         // custom validation to match response behaviour of .deleteOne
         if(!(order > 0)) {
             return res.status(404).send({
