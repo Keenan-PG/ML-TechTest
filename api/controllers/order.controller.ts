@@ -54,12 +54,36 @@ exports.findAll = (req, res) => {
 // Delete an order with orderID
 exports.deleteOne = (req, res) => {
     // using mongoose method to find via ID and remove record
-    console.log(req.params);
-    console.log(req.params.orderId);
     const param = req.params.orderId;
-    Order.deleteOne({ orderID: param }, function (err) {
-        (err) ? console.log(err.message) : null;
-        res.send({ message: 'Done :)' });
+    // using .deleteOne instead of .findByIdAndRemove as i've created my own unique index in the DB (orderID)
+    Order.deleteOne({ orderID: param }).then(order => {
+        // custom validation to match response behaviour of .deleteOne
+        if(!(order > 0)) {
+            return res.status(404).send({
+                message: "Order not found with id " + param
+            });
+        }
+        console.log(order);
+
+        // no response at all
+        if(!order) {
+            return res.status(500).send({
+                message: "Something went wrong :("
+            });
+        }
+
+        console.log(order);
+        
+        res.send({ message: `Deleted order number ${param} :)` });
+    }).catch(err => {
+        if(err.kind === 'ObjectId' || err.name === 'NotFound') {
+            return res.status(404).send({
+                message: "Order not found with id " + param
+            });                
+        }
+        return res.status(500).send({
+            message: "Could not order note with id " + param
+        });
     });
 
 };
