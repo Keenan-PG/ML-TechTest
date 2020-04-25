@@ -1,0 +1,79 @@
+/*
+Text
+*/
+
+.heroTitle {
+    font-family: Graphik;
+    font-size: 60px;
+    color: var(--primary-blue);
+    font-weight: bold;
+}
+
+.h1 {
+    font-family: Graphik;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.h1Gradient {
+    background: linear-gradient(to right, #9900CC 1%, #FF9900 19%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: Graphik;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.h2 {
+    font-family: Graphik;
+    font-size: 26px;
+    font-weight: bold;
+}
+
+.h2Gradient {
+    background: linear-gradient(to right, #9900CC 1%, #FF9900 19%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: Graphik;
+    font-size: 26px;
+    font-weight: bold;
+}
+
+.bodyText {
+    font-family: Graphik;
+    font-size: 18px;
+    color: var(--primary-black);
+    font-weight: normal;
+}
+
+.bodyTextBold {
+    font-family: Graphik;
+    font-size: 18px;
+    color: var(--primary-black);
+    font-weight: bold;
+}
+
+/*
+Links
+*/
+
+.link {
+    font-family: Graphik;
+    font-size: 18px;
+    color: var(--primary-blue);
+    font-weight: bold;
+    text-decoration: none;
+    opacity: 0.85;
+    transition: opacity .3s ease-in;
+    -moz-transition: opacity .3s ease-in;
+    -webkit-transition: opacity .3s ease-in;
+    -o-transition: opacity .3s ease-in;
+}
+
+.link:hover,
+.link:focus,
+.link:active {
+    opacity: 1;
+    color: var(--primary-blue);
+    text-decoration: none;
+}

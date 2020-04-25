@@ -1,0 +1,255 @@
+/* 
+buttons 
+*/
+
+/* blue button */
+.btnBlue {
+    padding: 13px 19px;
+    font-family: Graphik;
+    font-size: 15px;
+    color: var(--primary-white);
+    background-color: var(--primary-blue);
+    font-weight: bold;
+    border: 1px solid var(--primary-blue);
+    border-radius: 5px;
+    min-width: var(--btn-min-width);
+    opacity: 0.85;
+    transition: opacity .3s ease-in;           
+    -moz-transition: opacity .3s ease-in;
+    -webkit-transition: opacity .3s ease-in;
+    -o-transition: opacity .3s ease-in;
+}
+
+.btnBlue:hover,
+.btnBlue:focus,
+.btnBlue:active {
+    opacity: 1;
+    cursor: pointer;
+    padding: 13px 19px;
+    font-family: Graphik;
+    font-size: 15px;
+    color: var(--primary-white)!important;
+    background-color: var(--primary-blue)!important;
+    font-weight: bold;
+    border: 1px solid var(--primary-blue)!important;
+    border-radius: 5px;
+    min-width: var(--btn-min-width);
+    transition: opacity .3s ease-in;           
+    -moz-transition: opacity .3s ease-in;
+    -webkit-transition: opacity .3s ease-in;
+    -o-transition: opacity .3s ease-in;
+}
+
+/* red button */
+
+.btnRed {
+    padding: 13px 19px;
+    font-family: Graphik;
+    font-size: 15px;
+    color: var(--primary-white)!important;
+    background-color: var(--secondary-red)!important;
+    font-weight: bold;
+    border: 1px solid var(--secondary-red)!important;
+    border-radius: 5px;
+    min-width: var(--btn-min-width);
+    opacity: 0.85;
+    transition: opacity .3s ease-in;
+    -moz-transition: opacity .3s ease-in;
+    -webkit-transition: opacity .3s ease-in;
+    -o-transition: opacity .3s ease-in;
+}
+
+.btnRed:hover,
+.btnRed:focus,
+.btnRed:active {
+    opacity: 1;
+    cursor: pointer;
+    padding: 13px 19px;
+    font-family: Graphik;
+    font-size: 15px;
+    color: var(--primary-white)!important;
+    background-color: var(--secondary-red)!important;
+    font-weight: bold;
+    border: 1px solid var(--secondary-red)!important;
+    border-radius: 5px;
+    min-width: var(--btn-min-width);
+    transition: opacity .3s ease-in;
+    -moz-transition: opacity .3s ease-in;
+    -webkit-transition: opacity .3s ease-in;
+    -o-transition: opacity .3s ease-in;
+}
+
+/* blue secondary button (white bg blue text/border) */
+
+.btnBlueO {
+    padding: 13px 19px;
+    font-family: Graphik;
+    font-size: 15px;
+    color: var(--primary-blue);
+    background-color: var(--primary-white);
+    font-weight: bold;
+    border: 2px solid var(--primary-blue);
+    border-radius: 5px;
+    min-width: var(--btn-min-width);
+    opacity: 0.85;
+    transition: opacity .3s ease-in;
+    -moz-transition: opacity .3s ease-in;
+    -webkit-transition: opacity .3s ease-in;
+    -o-transition: opacity .3s ease-in;
+}
+
+.btnBlueO:hover,
+.btnBlueO:focus,
+.btnBlueO:active {
+    opacity: 1;
+    cursor: pointer;
+    padding: 13px 19px;
+    font-family: Graphik;
+    font-size: 15px;
+    color: var(--primary-blue)!important;
+    background-color: var(--primary-white)!important;
+    font-weight: bold;
+    border: 2px solid var(--primary-blue)!important;
+    border-radius: 5px;
+    min-width: var(--btn-min-width);
+    transition: opacity .3s ease-in;
+    -moz-transition: opacity .3s ease-in;
+    -webkit-transition: opacity .3s ease-in;
+    -o-transition: opacity .3s ease-in;
+}
+
+/* red secondary button (white background red text/border) */
+.btnRedO {
+    padding: 13px 19px;
+    font-family: Graphik;
+    font-size: 15px;
+    color: var(--secondary-red);
+    background-color: var(--primary-white);
+    font-weight: bold;
+    border: 2px solid var(--secondary-red);
+    border-radius: 5px;
+    min-width: var(--btn-min-width);
+    opacity: 0.85;
+    transition: opacity .3s ease-in;
+    -moz-transition: opacity .3s ease-in;
+    -webkit-transition: opacity .3s ease-in;
+    -o-transition: opacity .3s ease-in;
+}
+
+.btnRedO:hover,
+.btnRedO:focus,
+.btnRedO:active {
+    opacity: 1;
+    cursor: pointer;
+    padding: 13px 19px;
+    font-family: Graphik;
+    font-size: 15px;
+    color: var(--secondary-red)!important;
+    background-color: var(--primary-white)!important;
+    font-weight: bold;
+    border: 2px solid var(--secondary-red)!important;
+    border-radius: 5px;
+    min-width: var(--btn-min-width);
+    transition: opacity .3s ease-in;
+    -moz-transition: opacity .3s ease-in;
+    -webkit-transition: opacity .3s ease-in;
+    -o-transition: opacity .3s ease-in;
+}
+
+/* black and white button */
+
+.btnBW {
+    padding: 13px 19px;
+    font-family: Graphik;
+    font-size: 15px;
+    color: var(--primary-black);
+    background-color: var(--primary-white);
+    font-weight: bold;
+    border: 2px solid var(--primary-black);
+    border-radius: 5px;
+    min-width: var(--btn-min-width);
+    opacity: 0.85;
+    transition: opacity .3s ease-in;
+    -moz-transition: opacity .3s ease-in;
+    -webkit-transition: opacity .3s ease-in;
+    -o-transition: opacity .3s ease-in;
+}
+
+.btnBW:hover,
+.btnBW:focus,
+.btnBW:active {
+    opacity: 1;
+    cursor: pointer;
+    padding: 13px 19px;
+    font-family: Graphik;
+    font-size: 15px;
+    color: var(--primary-black)!important;
+    background-color: var(--primary-white)!important;
+    font-weight: bold;
+    border: 2px solid var(--primary-black)!important;
+    border-radius: 5px;
+    min-width: var(--btn-min-width);
+    transition: opacity .3s ease-in;
+    -moz-transition: opacity .3s ease-in;
+    -webkit-transition: opacity .3s ease-in;
+    -o-transition: opacity .3s ease-in;
+}
+
+/* match button  */
+.btnMatch {
+    opacity: 0.85;
+    color: var(--primary-blue) !important;
+    background-color: var(--primary-white) !important;
+    border: 2px solid var(--primary-blue) !important;
+    font-family: Graphik;
+    font-size: 15px;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: opacity .3s ease-in;
+    -moz-transition: opacity .3s ease-in;
+    -webkit-transition: opacity .3s ease-in;
+    -o-transition: opacity .3s ease-in;
+}
+
+.btnMatch:hover,
+.btnMatch:focus,
+.btnMatch:active {
+    opacity: 1;
+    background-color: var(--primary-white) !important;
+    border: 2px solid var(--primary-blue) !important;
+    border-color: var(--primary-blue) !important;
+    color: var(--primary-blue) !important;
+    box-shadow: none !important;
+    cursor: pointer;
+    font-family: Graphik;
+    font-size: 15px;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: opacity .3s ease-in;
+    -moz-transition: opacity .3s ease-in;
+    -webkit-transition: opacity .3s ease-in;
+    -o-transition: opacity .3s ease-in;
+}
+
+
+/* overwrite bootstrap styles */
+
+btn-primary:not(:disabled):not(.disabled).active,
+.btn-primary:not(:disabled):not(.disabled):active,
+.show>.btn-primary.dropdown-toggle {
+    opacity: 1;
+    border: inherit!important;
+    border-color: inherit !important;
+    color: inherit !important;
+    background-color: inherit !important;
+    cursor: pointer;
+    font-family: Graphik;
+    font-size: 15px;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: opacity .3s ease-in;
+    -moz-transition: opacity .3s ease-in;
+    -webkit-transition: opacity .3s ease-in;
+    -o-transition: opacity .3s ease-in;
+    box-shadow: none;
+}

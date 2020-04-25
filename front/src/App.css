@@ -1,38 +1,140 @@
-.App {
-  text-align: center;
+/* 
+Colours 
+*/
+:root {
+  --primary-cyan: #4bd3b0;
+  --primary-blue: #64aaeb;
+  --primary-orange: #fe6633;
+  --primary-red: #f70201;
+  --primary-white: #f8f8f8;
+  --primary-grey: #9a9ba1;
+  --background-colour: #222222;
+  font-family: Avenir, Helvetica, sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* 
+Fonts  
+*/
+
+/* regular */
+@font-face {
+  font-family: Graphik;
+  src: url("./assets/fonts/Graphik-Regular.ttf") format("ttf");
+  font-weight: normal;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* bold */
+@font-face {
+  font-family: Graphik;
+  src: url("./assets/fonts/Graphik-Bold.ttf") format("ttf");
+  font-weight: bold;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+/* light */
+@font-face {
+  font-family: Graphik Light;
+  src: url("./assets/fonts/Graphik-Light.ttf") format("ttf");
 }
 
-.App-link {
-  color: #61dafb;
+/* extra light */
+@font-face {
+  font-family: Graphik ExtraLight;
+  src: url("./assets/fonts/Graphik-Extralight.ttf") format("ttf");
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* thin */
+@font-face {
+  font-family: Graphik Thin;
+  src: url("./assets/fonts/Graphik-Thin.ttf") format("ttf");
+}
+
+/* 
+Colours 
+*/
+
+.blue {
+  color: var(--primary-blue) !important;
+}
+
+.black {
+  color: var(--primary-black) !important;
+}
+
+.lGrey {
+  color: var(--primary-lGrey) !important;
+}
+
+.white {
+  color: var(--primary-white) !important;
+}
+
+.red {
+  color: var(--secondary-red) !important;
+}
+
+.dGrey {
+  color: var(--secondary-dGrey) !important;
+}
+
+/* 
+BG Colours
+*/
+
+.bg-blue {
+  background-color: var(--primary-blue) !important;
+}
+
+.bg-black {
+  background-color: var(--primary-black) !important;
+}
+
+.bg-lGrey {
+  background-color: var(--primary-lGrey) !important;
+}
+
+.bg-white {
+  background-color: var(--primary-white) !important;
+}
+
+.bg-red {
+  background-color: var(--secondary-red) !important;
+}
+
+.bg-dGrey {
+  background-color: var(--secondary-dGrey) !important;
+}
+
+
+/* 
+Element modification (browser default ugliness)
+*/
+
+*,
+::after,
+::before {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--primary-white);
+  margin: 0;
+}
+
+section {
+  margin-bottom: 1rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-block-start: 0em;
+  margin-block-end: 0em;
+}
+
+label {
+  display: inline-block;
+  margin-bottom: .5rem;
 }
