@@ -28,7 +28,7 @@ exports.createOne = (req, res) => {
         customer_initials: req.body.customer_initials
     });
 
-    // Save Order in the database
+    // Save Order in the database if validation passes
     order.save()
     .then(data => {
         res.send(data);
@@ -43,6 +43,11 @@ exports.createOne = (req, res) => {
 exports.findAll = (req, res) => {
     Order.find()
     .then(orders => {
+        if (!orders) {
+            res.status(404).send({
+                message: "No orders!"
+            });
+        }
         res.send(orders);
     }).catch(err => {
         res.status(500).send({
@@ -53,27 +58,30 @@ exports.findAll = (req, res) => {
 
 // Delete an order with orderID
 exports.deleteOne = (req, res) => {
-    // using mongoose method to find via ID and remove record
+    // storing parameter (cleaner code)
     const param = req.params.orderId;
-    Order.findByIdAndRemove({ _id: param }).then(order => {
+
+    // using .deleteOne instead of .findByIdAndRemove as i've created my own unique index in the DB (orderID)
+    Order.deleteOne({ orderID: param }).then(order => {
         // custom validation to match response behaviour of .deleteOne
-        if(!(order > 0)) {
+        if(order.deletedCount === 0) {
             return res.status(404).send({
                 message: "Order not found with id " + param
             });
         }
-        console.log(order);
-
         // no response at all
         if(!order) {
             return res.status(500).send({
                 message: "Something went wrong :("
             });
         }
-
-        console.log(order);
         
-        res.send({ message: `Deleted order number ${param} :)` });
+        // send successful response if there's no errors and deletedCount isn't 0
+        if (order.deletedCount) {
+            res.send({ 
+                message: `Deleted order number ${param} :)` 
+            });
+        }
     }).catch(err => {
         if(err.kind === 'ObjectId' || err.name === 'NotFound') {
             return res.status(404).send({
