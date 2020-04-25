@@ -19,12 +19,16 @@ const server = new Server(app);
 
 // const Order = require('./api/models/Order');
 
+mongoose.Promise = Promise;
+
 server.start(port);
 
 mongoose.connect(
     database.url, {
         useNewUrlParser: true,
-        useUnifiedTopology: true
+        useUnifiedTopology: true,
+        useCreateIndex: true,
+        useFindAndModify: false
     })
     .then(() => console.log("Connected to Mongo! :-)"))
     .catch(err => {

@@ -9,6 +9,7 @@ export class Server {
     constructor(app: Express) {
         this.app = app;
     
+        // importing routes module & passing in app
         require('./routes/order.routes')(app);
  
         // // setting front as static asset directory - express will serve from here

@@ -53,23 +53,13 @@ exports.findAll = (req, res) => {
 
 // Delete an order with orderID
 exports.deleteOne = (req, res) => {
-    // using mongoose method to find via ID, a lot of error handling needed though 
-    Order.findByIdAndRemove(req.params.orderId)
-    .then(order => {
-        if(!order) {
-            return res.status(404).send({
-                message: "Cannot delete order number " + req.params.orderId + "! It's not been found :("
-            });
-        }
-        res.send({message: "Order deleted successfully!"});
-    }).catch(err => {
-        if(err.kind === 'ObjectId' || err.name === 'NotFound') {
-            return res.status(404).send({
-                message: "Cannot delete order number " + req.params.orderId + "! It's not been found :("
-            });                
-        }
-        return res.status(500).send({
-            message: "Cannot delete order number " + req.params.orderId + "! There was a server error :" + err.message
-        });
+    // using mongoose method to find via ID and remove record
+    console.log(req.params);
+    console.log(req.params.orderId);
+    const param = req.params.orderId;
+    Order.deleteOne({ orderID: param }, function (err) {
+        (err) ? console.log(err.message) : null;
+        res.send({ message: 'Done :)' });
     });
+
 };
