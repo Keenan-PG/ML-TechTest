@@ -15,7 +15,7 @@ export class Server {
         // importing routes module & passing in app (to set API Endpoints AFTER statically serving front end)
         require('./routes/order.routes')(app);
     
-        // // wildcard to bring any unmanaged routes to react app
+        // wildcard to bring any unmanaged routes to react app
         this.app.get("*", (req: Request, res: Response): void => {
             res.sendFile(path.resolve("./") + "/build/front/build/index.html");
         });
