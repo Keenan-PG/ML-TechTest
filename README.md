@@ -8,12 +8,12 @@ Run this In BOTH the root '/' and 'front/' directories to install project depend
 ## Frontend commands
 Run these commands from the '/front' directory.
 
-### Dev
+#### Dev
 
 ##### npm run dev 
 Starts the frontend development server.
 
-### Production
+#### Production
 
 ##### npm run build 
 Builds the frontend app into React's usual 'build/' directory
@@ -25,12 +25,12 @@ Moves production React app from  the usual 'build/', to our root 'build/' direct
 ## Backend commands
 Run these commands from the root '/' directory of the project.
 
-### Devs
+#### Dev
 
 ##### npm run dev 
 Starts the backend development server (uses nodemon for auto loading).
 
-### Production
+#### Production
 
 ##### npm run build 
 Compiles TypeScript to JS and plots into the 'build/' directory.
