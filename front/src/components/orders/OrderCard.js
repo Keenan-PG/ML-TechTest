@@ -1,31 +1,56 @@
 import React from 'react';
-import Card from 'react-bootstrap/Card';
-// text
-import BodyText from '../text/BodyText';
-// styles
-import cardStyles from '../../assets/styles/cards.module.css'; // Import css modules stylesheet as styles
-import textStyles from '../../assets/styles/text.module.css'; // Import css modules stylesheet as styles
+import PropTypes from 'prop-types';
 
-const EACardBlue = ({title, content}) => {
+// setting prop types 
+OrderCard.propTypes = {
+    order: PropTypes.shape({
+        orderID: PropTypes.number.isRequired,
+        product_name: PropTypes.string.isRequired,
+        category: PropTypes.string.isRequired,
+        size: PropTypes.number.isRequired,
+        colour: PropTypes.string.isRequired,
+        status: PropTypes.string.isRequired,
+        customer_initials: PropTypes.string.isRequired
+    }).isRequired
+};
+
+const OrderCard = (props) => {
+    // mapping given props to order object and setting defaults
+    const {
+        orderID = null,
+        product_name = '',
+        category = '',
+        size = null,
+        colour = '',
+        status = '',
+        customer_initials = ''
+    } = props.order || {};
+
     return (
-        <Card className={cardStyles.card}>
-        <Card.Body>
-            <Card.Title>
-                <h6 className={textStyles.bodyTextBold}>
-                    {title}
-                </h6>
-            </Card.Title>
-            <Card.Text>
-                <p className={textStyles.bodyText}>
-                    {content}
-                </p>
-                <BodyText
-                    content={content}
-                ></BodyText>
-            </Card.Text>
-        </Card.Body>
-    </Card>
+        <div className="col-sm-6 col-md-4 order-card">
+            <div>
+                { orderID }
+            </div>
+            <div>
+                { product_name }
+            </div>
+            <div>
+                { category }
+            </div>
+            <div>
+                { size }
+            </div>
+            <div>
+                { colour }
+            </div>
+            <div>
+                { status }
+            </div>
+            <div>
+                { customer_initials }
+            </div>
+        </div>
     )
 }
 
-export default EACardBlue;
+export default OrderCard;

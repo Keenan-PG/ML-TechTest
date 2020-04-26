@@ -77,7 +77,7 @@ Element modification (browser default ugliness)
 }
 
 body {
-  background-color: var(--primary-white);
+  background-color: var(--background-colour);
   margin: 0;
 }
 

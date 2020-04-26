@@ -22,7 +22,7 @@ class App extends Component {
   render() {
     return (
       <div>
-        <Layout className="mt-1">
+        <Layout>
           <Router>
             <Switch>
               {/* Home */}
