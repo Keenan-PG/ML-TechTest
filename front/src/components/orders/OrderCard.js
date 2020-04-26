@@ -15,29 +15,31 @@ const OrderCard = (props) => {
     } = props.order || {};
 
     return (
-        <div className="col-sm-6 col-md-4 order-card">
-            <div>
-                { orderID }
-            </div>
-            <div>
-                { img_url }
-            </div>
-            <div>
-                { product_name }
-            </div>
-            <div>
-                { category }
-            </div>
-            <div>
-                { size }
-            </div>
-            <div>
-                { colour }
-            </div>
-            <div>
+        <div className="order-card">
+            <div class="order-status">
                 { status }
             </div>
-            <div>
+            <div className="order-img-name-group">    
+                <div className="order-img">
+                    <img src={ img_url } alt={ product_name + " Image" }/>
+                </div>
+                <div className="order-product-name">
+                    { product_name }
+                </div>
+            </div>
+            <div className="order-category">
+                Category:<br/>
+                <span> { category }</span>
+            </div>
+            <div className="order-size">
+                Size:<br/>
+                <span> UK { size }</span>
+            </div>
+            <div className="order-colour">
+                Colour:<br/>
+                <span> { colour }</span> 
+            </div>
+            <div className="order-customer-initials">
                 { customer_initials }
             </div>
         </div>
