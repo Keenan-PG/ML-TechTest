@@ -16,31 +16,33 @@ const OrderCard = (props) => {
 
     return (
         <div className="order-card">
-            <div class="order-status">
-                { status }
+            <div className="order-status">
+                <div className={status}>&nbsp;</div>
             </div>
-            <div className="order-img-name-group">    
-                <div className="order-img">
-                    <img src={ img_url } alt={ product_name + " Image" }/>
+            <div className="order-card-inner">
+                <div className="order-img-name-group">    
+                    <div className="order-img">
+                        <img src={ img_url } alt={ product_name + " Image" }/>
+                    </div>
+                    <div className="order-product-name">
+                        { product_name }
+                    </div>
                 </div>
-                <div className="order-product-name">
-                    { product_name }
+                <div className="order-category">
+                    Category:<br/>
+                    <span> { category }</span>
                 </div>
-            </div>
-            <div className="order-category">
-                Category:<br/>
-                <span> { category }</span>
-            </div>
-            <div className="order-size">
-                Size:<br/>
-                <span> UK { size }</span>
-            </div>
-            <div className="order-colour">
-                Colour:<br/>
-                <span> { colour }</span> 
-            </div>
-            <div className="order-customer-initials">
-                { customer_initials }
+                <div className="order-size">
+                    Size:<br/>
+                    <span> UK { size }</span>
+                </div>
+                <div className="order-colour">
+                    Colour:<br/>
+                    <span> { colour }</span> 
+                </div>
+                <div className="order-customer-initials">
+                    { customer_initials }
+                </div>
             </div>
         </div>
     )
