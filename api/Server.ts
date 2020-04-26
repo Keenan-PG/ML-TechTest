@@ -9,16 +9,16 @@ export class Server {
     constructor(app: Express) {
         this.app = app;
     
-        // importing routes module & passing in app
+        // setting front as static asset directory - express will serve from here
+        this.app.use(express.static(path.resolve("./") + "/build/front/build"));
+
+        // importing routes module & passing in app (to set API Endpoints AFTER statically serving front end)
         require('./routes/order.routes')(app);
- 
-        // // setting front as static asset directory - express will serve from here
-        // this.app.use(express.static(path.resolve("./") + "/build/front/build"));
     
         // // wildcard to bring any unmanaged routes to react app
-        // this.app.get("*", (req: Request, res: Response): void => {
-        //     res.sendFile(path.resolve("./") + "/build/front/build/index.html");
-        // });
+        this.app.get("*", (req: Request, res: Response): void => {
+            res.sendFile(path.resolve("./") + "/build/front/build/index.html");
+        });
     }
 
     public start(port: number): void {
