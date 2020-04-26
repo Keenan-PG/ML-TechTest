@@ -216,3 +216,13 @@ label {
 .order-customer-initials span {
   font-weight: 650;
 }
+
+/* Sorting  */
+
+.dot {
+  height: 25px;
+  width: 25px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+}

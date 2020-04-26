@@ -2,9 +2,11 @@ import React from 'react';
 // comps
 import OrderCardList from '../orders/OrderCardList'
 
-const Landing = (props) => {
+const Landing = () => {
     return (
-        <OrderCardList/>
+        <div>
+            <OrderCardList/>
+        </div>
     );
 }
 
