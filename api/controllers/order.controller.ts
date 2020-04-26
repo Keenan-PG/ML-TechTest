@@ -5,6 +5,7 @@ exports.createOne = (req, res) => {
     // Validate request
     if(
         !req.body.orderID || 
+        !req.body.img_url || 
         !req.body.product_name || 
         !req.body.category || 
         !req.body.size || 
@@ -20,6 +21,7 @@ exports.createOne = (req, res) => {
     // Create an Order    
     const order = new Order({
         orderID: req.body.orderID,
+        img_url: req.body.img_url,
         product_name: req.body.product_name,
         category: req.body.category,
         size: req.body.size,
@@ -48,7 +50,9 @@ exports.findAll = (req, res) => {
                 message: "No orders!"
             });
         }
+        // if no errors - send orders as response 
         res.send(orders);
+        
     }).catch(err => {
         res.status(500).send({
             message: err.message || "An error occured :-("

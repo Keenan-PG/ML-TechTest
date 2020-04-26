@@ -9,6 +9,10 @@ const OrderSchema = new Schema({
         required: true,
         unique: true,
     },
+    img_url : {
+        type: String,
+        required: true
+    },
     product_name : {
         type: String,
         required: true

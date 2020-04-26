@@ -1,6 +1,6 @@
 [{
     "orderID": 1,
-    "img_url": "https://i8.amplience.net/i/jpl/jd_131369_a?qlt=92&w=750&h=531&v=1&fmt=webp",
+    "img_url": "https://i8.amplience.net/i/jpl/jd_131369_a?qlt=92&w=150&v=1&fmt=webp",
     "product_name": "Nike Air VaporMax FlyKnit 3",
     "category": "Men",
     "size": 9,
@@ -9,7 +9,7 @@
     "customer_initials": "JH"
 }, {
     "orderID": 2,
-    "img_url": "https://i8.amplience.net/i/jpl/jd_351533_a?qlt=92&w=750&h=531&v=1&fmt=webp",
+    "img_url": "https://i8.amplience.net/i/jpl/jd_351533_a?qlt=92&w=150&v=1&fmt=webp",
     "product_name": "adidas Originals OZWEEGO",
     "category": "Women",
     "size": 4,
@@ -18,7 +18,7 @@
     "customer_initials": "JD"
 }, {
     "orderID": 3,
-    "img_url": "https://i8.amplience.net/i/jpl/jd_341639_a?qlt=92&w=750&h=531&v=1&fmt=webp",
+    "img_url": "https://i8.amplience.net/i/jpl/jd_341639_a?qlt=92&w=150&v=1&fmt=webp",
     "product_name": "Nike Air Max 95 Ultra SE",
     "category": "Men",
     "size": 10,
@@ -27,7 +27,7 @@
     "customer_initials": "GM"
 }, {
     "orderID": 4,
-    "img_url": "https://i8.amplience.net/i/jpl/jd_107034_a?qlt=92&w=750&h=531&v=1&fmt=webp",
+    "img_url": "https://i8.amplience.net/i/jpl/jd_107034_a?qlt=92&w=150&v=1&fmt=webp",
     "product_name": "Nike Air VaporMax 2019",
     "category": "Junior",
     "size": 3,
@@ -36,7 +36,7 @@
     "customer_initials": "FP"
 },{
     "orderID": 5,
-    "img_url": "https://i8.amplience.net/i/jpl/jd_131369_a?qlt=92&w=750&h=531&v=1&fmt=webp",
+    "img_url": "https://i8.amplience.net/i/jpl/jd_131369_a?qlt=92&w=150&v=1&fmt=webp",
     "product_name": "Nike Air VaporMax FlyKnit 3",
     "category": "Men",
     "size": 9,
@@ -45,7 +45,7 @@
     "customer_initials": "KG"
 }, {
     "orderID": 6,
-    "img_url": "https://i8.amplience.net/i/jpl/jd_351533_a?qlt=92&w=750&h=531&v=1&fmt=webp",
+    "img_url": "https://i8.amplience.net/i/jpl/jd_351533_a?qlt=92&w=150&v=1&fmt=webp",
     "product_name": "adidas Originals OZWEEGO",
     "category": "Women",
     "size": 4,
@@ -54,7 +54,7 @@
     "customer_initials": "LG"
 }, {
     "orderID": 7,
-    "img_url": "https://i8.amplience.net/i/jpl/jd_341639_a?qlt=92&w=750&h=531&v=1&fmt=webp",
+    "img_url": "https://i8.amplience.net/i/jpl/jd_341639_a?qlt=92&w=150&v=1&fmt=webp",
     "product_name": "Nike Air Max 95 Ultra SE",
     "category": "Men",
     "size": 10,
@@ -63,7 +63,7 @@
     "customer_initials": "MP"
 }, {
     "orderID": 8,
-    "img_url": "https://i8.amplience.net/i/jpl/jd_107034_a?qlt=92&w=750&h=531&v=1&fmt=webp",
+    "img_url": "https://i8.amplience.net/i/jpl/jd_107034_a?qlt=92&w=150&v=1&fmt=webp",
     "product_name": "Nike Air VaporMax 2019",
     "category": "Junior",
     "size": 3,
@@ -72,7 +72,7 @@
     "customer_initials": "MG"
 }, {
     "orderID": 9,
-    "img_url": "https://i8.amplience.net/i/jpl/jd_107034_a?qlt=92&w=750&h=531&v=1&fmt=webp",
+    "img_url": "https://i8.amplience.net/i/jpl/jd_107034_a?qlt=92&w=150&v=1&fmt=webp",
     "product_name": "Nike Air VaporMax 2019",
     "category": "Junior",
     "size": 3,
@@ -81,7 +81,7 @@
     "customer_initials": "AB"
 },{
     "orderID": 10,
-    "img_url": "https://i8.amplience.net/i/jpl/jd_131369_a?qlt=92&w=750&h=531&v=1&fmt=webp",
+    "img_url": "https://i8.amplience.net/i/jpl/jd_131369_a?qlt=92&w=150&v=1&fmt=webp",
     "product_name": "Nike Air VaporMax FlyKnit 3",
     "category": "Men",
     "size": 9,
@@ -90,7 +90,7 @@
     "customer_initials": "CD"
 }, {
     "orderID": 11,
-    "img_url": "https://i8.amplience.net/i/jpl/jd_351533_a?qlt=92&w=750&h=531&v=1&fmt=webp",
+    "img_url": "https://i8.amplience.net/i/jpl/jd_351533_a?qlt=92&w=150&v=1&fmt=webp",
     "product_name": "adidas Originals OZWEEGO",
     "category": "Women",
     "size": 4,
@@ -99,7 +99,7 @@
     "customer_initials": "EF"
 }, {
     "orderID": 12,
-    "img_url": "https://i8.amplience.net/i/jpl/jd_341639_a?qlt=92&w=750&h=531&v=1&fmt=webp",
+    "img_url": "https://i8.amplience.net/i/jpl/jd_341639_a?qlt=92&w=150&v=1&fmt=webp",
     "product_name": "Nike Air Max 95 Ultra SE",
     "category": "Men",
     "size": 10,
@@ -108,7 +108,7 @@
     "customer_initials": "GH"
 },{
     "orderID": 13,
-    "img_url": "https://i8.amplience.net/i/jpl/jd_131369_a?qlt=92&w=750&h=531&v=1&fmt=webp",
+    "img_url": "https://i8.amplience.net/i/jpl/jd_131369_a?qlt=92&w=150&v=1&fmt=webp",
     "product_name": "Nike Air VaporMax FlyKnit 3",
     "category": "Men",
     "size": 9,
@@ -117,7 +117,7 @@
     "customer_initials": "IJ"
 }, {
     "orderID": 14,
-    "img_url": "https://i8.amplience.net/i/jpl/jd_351533_a?qlt=92&w=750&h=531&v=1&fmt=webp",
+    "img_url": "https://i8.amplience.net/i/jpl/jd_351533_a?qlt=92&w=150&v=1&fmt=webp",
     "product_name": "adidas Originals OZWEEGO",
     "category": "Women",
     "size": 4,
@@ -126,7 +126,7 @@
     "customer_initials": "KL"
 }, {
     "orderID": 15,
-    "img_url": "https://i8.amplience.net/i/jpl/jd_341639_a?qlt=92&w=750&h=531&v=1&fmt=webp",
+    "img_url": "https://i8.amplience.net/i/jpl/jd_341639_a?qlt=92&w=150&v=1&fmt=webp",
     "product_name": "Nike Air Max 95 Ultra SE",
     "category": "Men",
     "size": 10,
@@ -135,7 +135,7 @@
     "customer_initials": "MN"
 }, {
     "orderID": 16,
-    "img_url": "https://i8.amplience.net/i/jpl/jd_107034_a?qlt=92&w=750&h=531&v=1&fmt=webp",
+    "img_url": "https://i8.amplience.net/i/jpl/jd_107034_a?qlt=92&w=150&v=1&fmt=webp",
     "product_name": "Nike Air VaporMax 2019",
     "category": "Junior",
     "size": 3,
@@ -144,7 +144,7 @@
     "customer_initials": "OP"
 },{
     "orderID": 17,
-    "img_url": "https://i8.amplience.net/i/jpl/jd_131369_a?qlt=92&w=750&h=531&v=1&fmt=webp",
+    "img_url": "https://i8.amplience.net/i/jpl/jd_131369_a?qlt=92&w=150&v=1&fmt=webp",
     "product_name": "Nike Air VaporMax FlyKnit 3",
     "category": "Men",
     "size": 9,
@@ -153,7 +153,7 @@
     "customer_initials": "QR"
 }, {
     "orderID": 18,
-    "img_url": "https://i8.amplience.net/i/jpl/jd_351533_a?qlt=92&w=750&h=531&v=1&fmt=webp",
+    "img_url": "https://i8.amplience.net/i/jpl/jd_351533_a?qlt=92&w=150&v=1&fmt=webp",
     "product_name": "adidas Originals OZWEEGO",
     "category": "Women",
     "size": 4,
@@ -162,7 +162,7 @@
     "customer_initials": "ST"
 }, {
     "orderID": 19,
-    "img_url": "https://i8.amplience.net/i/jpl/jd_341639_a?qlt=92&w=750&h=531&v=1&fmt=webp",
+    "img_url": "https://i8.amplience.net/i/jpl/jd_341639_a?qlt=92&w=150&v=1&fmt=webp",
     "product_name": "Nike Air Max 95 Ultra SE",
     "category": "Men",
     "size": 10,
@@ -171,7 +171,7 @@
     "customer_initials": "UV"
 }, {
     "orderID": 20,
-    "img_url": "https://i8.amplience.net/i/jpl/jd_107034_a?qlt=92&w=750&h=531&v=1&fmt=webp",
+    "img_url": "https://i8.amplience.net/i/jpl/jd_107034_a?qlt=92&w=150&v=1&fmt=webp",
     "product_name": "Nike Air VaporMax 2019",
     "category": "Junior",
     "size": 3,
@@ -180,7 +180,7 @@
     "customer_initials": "WX"
 }, {
     "orderID": 21,
-    "img_url": "https://i8.amplience.net/i/jpl/jd_107034_a?qlt=92&w=750&h=531&v=1&fmt=webp",
+    "img_url": "https://i8.amplience.net/i/jpl/jd_107034_a?qlt=92&w=150&v=1&fmt=webp",
     "product_name": "Nike Air VaporMax 2019",
     "category": "Junior",
     "size": 3,
@@ -189,7 +189,7 @@
     "customer_initials": "YZ"
 },{
     "orderID": 22,
-    "img_url": "https://i8.amplience.net/i/jpl/jd_131369_a?qlt=92&w=750&h=531&v=1&fmt=webp",
+    "img_url": "https://i8.amplience.net/i/jpl/jd_131369_a?qlt=92&w=150&v=1&fmt=webp",
     "product_name": "Nike Air VaporMax FlyKnit 3",
     "category": "Men",
     "size": 9,
@@ -198,7 +198,7 @@
     "customer_initials": "LT"
 }, {
     "orderID": 23,
-    "img_url": "https://i8.amplience.net/i/jpl/jd_351533_a?qlt=92&w=750&h=531&v=1&fmt=webp",
+    "img_url": "https://i8.amplience.net/i/jpl/jd_351533_a?qlt=92&w=150&v=1&fmt=webp",
     "product_name": "adidas Originals OZWEEGO",
     "category": "Women",
     "size": 4,
@@ -207,7 +207,7 @@
     "customer_initials": "RB"
 }, {
     "orderID": 24,
-    "img_url": "https://i8.amplience.net/i/jpl/jd_341639_a?qlt=92&w=750&h=531&v=1&fmt=webp",
+    "img_url": "https://i8.amplience.net/i/jpl/jd_341639_a?qlt=92&w=150&v=1&fmt=webp",
     "product_name": "Nike Air Max 95 Ultra SE",
     "category": "Men",
     "size": 10,
