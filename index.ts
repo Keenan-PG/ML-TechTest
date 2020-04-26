@@ -8,6 +8,14 @@ const db = require('./api/config/database.config');
 
 const app = express();
 
+// CORS control
+app.use(
+    (req, res, next) => {
+        res.header("Access-Control-Allow-Origin", "*");
+        res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+        next();
+    }
+    );
 // using middleware to parse request bodies properly
 app.use(bodyParser.urlencoded({'extended':'true'}));            
 app.use(bodyParser.json());                                     
