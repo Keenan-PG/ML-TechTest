@@ -14,9 +14,11 @@ app.use(bodyParser.json());
 app.use(bodyParser.json({ type: 'application/vnd.api+json' })); 
 app.use(methodOverride());
 
+// express set up 
 const port = 8080;
 const server = new Server(app);
 
+// making mongoose promise behave like a JS promise (dodgy responses otherwise)
 mongoose.Promise = Promise;
 
 // start server 
@@ -25,6 +27,7 @@ server.start(port);
 // db connect 
 mongoose.connect(
     db.url, {
+        // meta to avoid using depreciated connection methods  
         useNewUrlParser: true,
         useUnifiedTopology: true,
         useCreateIndex: true,
