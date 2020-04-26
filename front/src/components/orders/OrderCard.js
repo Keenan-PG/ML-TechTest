@@ -1,19 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-// setting prop types 
-OrderCard.propTypes = {
-    order: PropTypes.shape({
-        orderID: PropTypes.number.isRequired,
-        product_name: PropTypes.string.isRequired,
-        category: PropTypes.string.isRequired,
-        size: PropTypes.number.isRequired,
-        colour: PropTypes.string.isRequired,
-        status: PropTypes.string.isRequired,
-        customer_initials: PropTypes.string.isRequired
-    }).isRequired
-};
-
 const OrderCard = (props) => {
     // mapping given props to order object and setting defaults
     const {
@@ -52,5 +39,18 @@ const OrderCard = (props) => {
         </div>
     )
 }
+
+// setting prop types 
+OrderCard.propTypes = {
+    order: PropTypes.shape({
+        orderID: PropTypes.number.isRequired,
+        product_name: PropTypes.string.isRequired,
+        category: PropTypes.string.isRequired,
+        size: PropTypes.number.isRequired,
+        colour: PropTypes.string.isRequired,
+        status: PropTypes.string.isRequired,
+        customer_initials: PropTypes.string.isRequired
+    }).isRequired
+};
 
 export default OrderCard;
