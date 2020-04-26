@@ -15,7 +15,7 @@ app.use(
         res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
         next();
     }
-    );
+);
 // using middleware to parse request bodies properly
 app.use(bodyParser.urlencoded({'extended':'true'}));            
 app.use(bodyParser.json());                                     
