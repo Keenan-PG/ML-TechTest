@@ -1,46 +1,27 @@
-import React, { Component } from 'react';
+import React from 'react';
 // components
 import OrderCard from './OrderCard';
-// npm 
-import axios from 'axios';
 
-class OrderCardList extends Component {
-    constructor() {
-        super();
-    
-        // initialize state(s) of comp
-        this.state = {
-            orders: []
-        }
-      }
-    
-    /* Lifecycle method(s) */
-    
-    // componentDidMount() lifecycle method to call api upon component rendering
+const OrderCardList = (props) => {
 
-    componentDidMount() {
-        // get request to endpoint
-        axios({
-            method: "get", 
-            url:"http://localhost:8080/orders"
-        }).then(response => {
-            // accessing data property from response object (array of orders)
-            return response.data;
-        }).then(orders => {
-            // fetched reviews are stored in component state
-            this.setState({ orders });
-        });
-    }  
+    const {
+        orderID = null,
+        img_url = '',
+        product_name = '',
+        category = '',
+        size = null,
+        colour = '',
+        status = '',
+        customer_initials = ''
+    } = props.orders || {};
 
     /* Render */
     
-    render() {
-        return this.state.orders.map((order, i) => {
-            return (
-                <OrderCard key={order.orderID} order={order} />
-            );
-        })
-    }
+    return props.orders.map((order, i) => {
+        return (
+            <OrderCard key={order.orderID} order={order} />
+        );
+    })
 }
 
 export default OrderCardList;

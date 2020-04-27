@@ -21,20 +21,16 @@ import Layout from './components/core/Layout';
 class App extends Component {
   render() {
     return (
-      <div>
-        <Layout>
-          <Router>
-            <Switch>
-              {/* Home */}
-              <Route exact path="/" component={MainPage} />
-              {/* 404s */}
-              <Route exact path="/404" component={ErrorPage} />
-              {/* wildcard redirect */}
-              <Redirect to="/404"/>
-            </Switch>
-          </Router>
-        </Layout>
-      </div>
+      <Layout>
+        <Router>
+          <Switch>
+            {/* Home */}
+            <Route path="/" component={MainPage} />
+            {/* 404s */}
+            <Route exact path="/404" component={ErrorPage} />
+          </Switch>
+        </Router>
+      </Layout>
     );
   }
 }

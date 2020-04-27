@@ -1,45 +1,51 @@
-import React, { Component } from 'react';
+import React, { useState, useEffect, Component } from 'react';
 // comps
 import OrderCardList from '../orders/OrderCardList'
 import Pagination from '../pagination/Pagination';
 // npm 
 import axios from 'axios';
 
-class Landing extends Component {
+const Landing = () => {
 
-    state = { allOrders: [], currentOrders: [], currentPage: null, totalPages: null }
-
-    componentDidMount() {
-        axios({
-            method: "get", 
-            url:"http://localhost:8080/orders"
-        }).then(response => {
-            // accessing data property from response object (array of orders)
-            return response.data;
-        }).then(allOrders => {
-            // fetched reviews are stored in component state
-            this.setState({ allOrders });
-        });
-    }
-
-    onPageChanged = data => {
-        const { allOrders } = this.state;
-        const { currentPage, totalPages, pageLimit } = data;
-
-        const offset = (currentPage - 1) * pageLimit;
-        const currentOrders = allOrders.slice(offset, offset + pageLimit);
-
-        this.setState({ currentPage, currentOrders, totalPages });
-    }
-
-    render() {
-        return (
-            <div>
-                <OrderCardList />
-                <Pagination totalRecords={4}/>
-            </div>
-        );
-    }
-}
+    const [orders, setOrders] = useState([]);
+    const [loading, setLoading] = useState(false);
+    const [currentPage, setCurrentPage] = useState(1);
+    // setting defaults into component state 
+    const [ordersPerPage] = useState(4);
+  
+    useEffect(() => {
+        // async function 
+        const fetchOrders = async () => {
+            setLoading(true);
+            const res = await axios.get('http://localhost:8080/orders');
+            setOrders(res.data);
+            setLoading(false);
+        };
+        fetchOrders(); // invoking itself within hook 
+    }, []);
+  
+    // Get current orders
+    const indexOfLastOrder = currentPage * ordersPerPage;
+    const indexOfFirstOrder = indexOfLastOrder - ordersPerPage;
+    const currentOrders = orders.slice(indexOfFirstOrder, indexOfLastOrder);
+  
+    // Change page
+    const paginate = (pageNumber) => setCurrentPage(pageNumber);
+  
+    return (
+      <div>
+        <div className="layout-Header">
+            
+        </div>
+        <OrderCardList orders={currentOrders} loading={loading} className="layout-OrderCards" />
+        <Pagination
+          postsPerPage={ordersPerPage}
+          totalPosts={orders.length}
+          paginate={paginate}
+          className="layout-Paging"
+        />
+      </div>
+    );
+  };
 
 export default Landing;
