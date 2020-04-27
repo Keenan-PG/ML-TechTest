@@ -7,9 +7,9 @@ import axios from 'axios';
 
 const Landing = () => {
     const [orders, setOrders] = useState([]);
+    // setting defaults into component state 
     const [loading, setLoading] = useState(false);
     const [currentPage, setCurrentPage] = useState(1);
-    // setting defaults into component state 
     const [ordersPerPage] = useState(4);
   
     useEffect(() => {
@@ -20,22 +20,35 @@ const Landing = () => {
             setOrders(res.data);
             setLoading(false);
         };
-        fetchOrders(); // invoking itself within hook 
+        fetchOrders(); // invoking within hook to get return
     }, []);
-  
+
     // Get current orders
     const indexOfLastOrder = currentPage * ordersPerPage;
     const indexOfFirstOrder = indexOfLastOrder - ordersPerPage;
     const currentOrders = orders.slice(indexOfFirstOrder, indexOfLastOrder);
   
     // Change page
-    const paginate = (pageNumber) => setCurrentPage(pageNumber);
+    const paginate = (pageNumber, currentPage) => {
+        // remove is-active class from previous page
+        document.getElementById(currentPage).classList.remove("is-active");
+        // set new current page (and change page)
+        setCurrentPage(pageNumber);
+        // add is-active class to dot which belongs to new page 
+        document.getElementById(pageNumber).classList.add("is-active");
+    } 
+
+    const setIsActive = (currentPage) => {
+        document.getElementById(currentPage).classList.add("is-active");
+    };
   
     return (
       <div>
         <div className="layout-Header">
             <div className="add-Order">
-                <button>Add New</button>
+                <button className="btn">
+                    Add New <span>+</span>
+                </button>
             </div>
             <div className="filter-Orders">
                 <div className="order-filter">
@@ -58,6 +71,7 @@ const Landing = () => {
         </div>
         <OrderCardList orders={currentOrders} loading={loading} className="layout-OrderCards" />
         <Pagination
+          currentPage={currentPage}
           postsPerPage={ordersPerPage}
           totalPosts={orders.length}
           paginate={paginate}
