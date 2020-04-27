@@ -37,10 +37,6 @@ const Landing = () => {
         // add is-active class to dot which belongs to new page 
         document.getElementById(pageNumber).classList.add("is-active");
     } 
-
-    const setIsActive = (currentPage) => {
-        document.getElementById(currentPage).classList.add("is-active");
-    };
   
     return (
       <div>

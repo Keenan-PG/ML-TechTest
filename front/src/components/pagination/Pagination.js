@@ -10,9 +10,10 @@ const Pagination = ({ postsPerPage, totalPosts, paginate, currentPage }) => {
   return (
     <div className="wrapper">
       <ul className="pagination">
-        {pageNumbers.map(number => (
+        {pageNumbers.map((number, i) => (
           <li key={number} className="pagination__item">
-            <a onClick={() => paginate(number, currentPage)} href="#" id={number} className="pagination__link">
+            <a onClick={() => paginate(number, currentPage)} href="#" id={number} 
+            className={"pagination__link " + (i < 1 ? 'is-active' : ' ')}>
               {number}
             </a>
           </li>
