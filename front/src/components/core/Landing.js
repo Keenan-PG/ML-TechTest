@@ -41,11 +41,13 @@ const Landing = () => {
     return (
       <div>
         <div className="layout-Header">
+            {/* 
             <div className="add-Order">
                 <button className="btn">
                     Add New <span>+</span>
                 </button>
-            </div>
+            </div> 
+            */}
             <div className="filter-Orders">
                 <div className="order-filter">
                     <span className="dot ready" />
