@@ -6,7 +6,6 @@ import Pagination from '../pagination/Pagination';
 import axios from 'axios';
 
 const Landing = () => {
-
     const [orders, setOrders] = useState([]);
     const [loading, setLoading] = useState(false);
     const [currentPage, setCurrentPage] = useState(1);
@@ -35,7 +34,27 @@ const Landing = () => {
     return (
       <div>
         <div className="layout-Header">
-            
+            <div className="add-Order">
+                <button>Add New</button>
+            </div>
+            <div className="filter-Orders">
+                <div className="order-filter">
+                    <span className="dot ready" />
+                    Ready to Try
+                </div>
+                <div className="order-filter">
+                    <span className="dot coming" />
+                    On the way
+                </div>
+                <div className="order-filter">
+                    <span className="dot queued" />
+                    In the queue
+                </div>
+                <div className="order-filter">
+                    <span className="dot out" />
+                    Out of stock
+                </div>
+            </div>
         </div>
         <OrderCardList orders={currentOrders} loading={loading} className="layout-OrderCards" />
         <Pagination

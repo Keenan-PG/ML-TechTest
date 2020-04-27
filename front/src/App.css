@@ -78,6 +78,7 @@ Element modification (browser default ugliness)
 
 body {
   background-color: var(--background-colour);
+  font-family: Avenir, Helvetica, sans-serif;
   margin: 0;
 }
 
@@ -109,15 +110,65 @@ label {
 }
 
 .layout-Header {
-  min-height:10vh;
+  display:flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height:100%;
+  max-height:10vh;
+}
+
+.add-Order {
+  width: 55%;
+}
+
+.filter-Orders {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  text-transform: uppercase;
+  color: var(--primary-white);
+  letter-spacing: 2.5px;
+  font-weight: 575;
+  width: 45%;
+  font-size: 0.5rem;
+}
+
+.order-filter {
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.dot {
+  height: 17.5px;
+  width: 17.5px;
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 0.3rem;
+  border: 0.5px solid var(--primary-white);
+}
+
+.dot.ready {
+  background-color: var(--primary-cyan);
+}
+.dot.coming {
+  background-color: var(--primary-blue);
+}
+.dot.queued {
+  background-color: var(--primary-orange);
+}
+.dot.out {
+  background-color: var(--primary-red);
 }
 
 .layout-OrderCards {
-  min-height:80vh;
+  height:100%;
+  max-height:80vh;
 }
 
 .layout-Paging {
-  min-height:10vh;
+  height:100%;
+  max-height:10vh;
 }
 
 /* CARD  */
@@ -239,16 +290,15 @@ label {
 
 .pagination__item {
   display: inline-block;
-  margin: 0 10px;
 }
 
 .pagination__link {
   position: relative;
   text-indent: -99em;
-  overflow: hiddin;
+  overflow: hidden;
   display: block;
-  width: 30px;
-  height: 30px;
+  width: 25px;
+  height: 25px;
 }
 
 .pagination__link:before,
@@ -257,10 +307,9 @@ label {
   display: block;
   position: absolute;
   top: 0;
+  border-radius: 50%;
   width: 100%;
   height: 100%;
-  border-radius: 50%;
-  border: 3px solid #ecf0f1;
   transition: all 600ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
 
