@@ -24,7 +24,7 @@ class OrderCardList extends Component {
             method: "get", 
             url:"http://localhost:8080/orders"
         }).then(response => {
-            // accessing data property from response object (array of reviews)
+            // accessing data property from response object (array of orders)
             return response.data;
         }).then(orders => {
             // fetched reviews are stored in component state
@@ -37,8 +37,6 @@ class OrderCardList extends Component {
     render() {
         return this.state.orders.map((order, i) => {
             return (
-                // using calculation of map index 
-                // to make cards come in on a slight delay of the last on
                 <OrderCard key={order.orderID} order={order} />
             );
         })

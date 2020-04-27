@@ -3,11 +3,7 @@ import React from 'react';
 import Landing from '../components/core/Landing';
 
 const MainPage = () => {
-    return (
-        <div>
-            <Landing/>
-        </div>
-    );
+    return <Landing />;
 }
 
 export default MainPage;
