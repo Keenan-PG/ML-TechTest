@@ -1,9 +1,9 @@
 import React from 'react';
 // components
-import Landing from '../components/core/Landing';
+import Dashboard from '../components/core/Dashboard';
 
 const MainPage = () => {
-    return <Landing />;
+    return <Dashboard />;
 }
 
 export default MainPage;

@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from 'react';
 // comps
+import FilterOrders from '../orders/FilterOrders'
 import OrderCardList from '../orders/OrderCardList'
 import Pagination from '../pagination/Pagination';
 // npm 
 import axios from 'axios';
 
-const Landing = () => {
+const Dashboard = () => {
     // getting and setting Orders
     const [orders, setOrders] = useState([]);
     // getting and setting Orders
@@ -92,24 +93,7 @@ const Landing = () => {
                 </button>
             </div> 
             */}
-            <div className="filter-Orders">
-                <div className="order-filter" onClick={() => filterOrders("Ready")}>
-                    <span className="dot ready" />
-                    Ready to Try
-                </div>
-                <div className="order-filter" onClick={() => filterOrders("Coming")}>
-                    <span className="dot coming" />
-                    On the way
-                </div>
-                <div className="order-filter" onClick={() => filterOrders("Queued")}>
-                    <span className="dot queued" />
-                    In the queue
-                </div>
-                <div className="order-filter" onClick={() => filterOrders("Out")}>
-                    <span className="dot out" />
-                    Out of stock
-                </div>
-            </div>
+            <FilterOrders filterOrders={filterOrders} />
         </div>
         <OrderCardList orders={currentOrders} loading={loading} className="layout-OrderCards" />
         <Pagination
@@ -123,4 +107,4 @@ const Landing = () => {
     );
   };
 
-export default Landing;
+export default Dashboard;
