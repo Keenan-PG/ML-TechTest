@@ -77,7 +77,8 @@ const Landing = () => {
                 setOrderFilter("Out");
                 break;
             default:
-                console.log('No valid status passed to orderFilter');
+                console.log('No valid status passed to orderFilter, cleaning state...');
+                setOrderFilter("");
         }
     }
   
