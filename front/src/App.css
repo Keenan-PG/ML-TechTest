@@ -134,6 +134,7 @@ label {
   width: 45%;
   font-size: 0.5rem;
   margin-left: auto;
+  cursor: pointer;
 }
 
 .order-filter {

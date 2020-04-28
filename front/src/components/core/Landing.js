@@ -10,9 +10,9 @@ const Landing = () => {
     const [orders, setOrders] = useState([]);
     // getting and setting Orders
     const [orderFilter, setOrderFilter] = useState("");
-    // setting defaults into component state 
+    // setting loading defaults into component state 
     const [loading, setLoading] = useState(false);
-    // setting defaults in state
+    // setting paging defaults in state
     const [currentPage, setCurrentPage] = useState(1);
     const [ordersPerPage] = useState(4);
   
