@@ -1,4 +1,6 @@
 import React from 'react';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
 
 const Pagination = ({ postsPerPage, totalPosts, paginate, currentPage }) => {
   const pageNumbers = [];
@@ -8,22 +10,27 @@ const Pagination = ({ postsPerPage, totalPosts, paginate, currentPage }) => {
   }
 
   return (
-    <div className="wrapper">
-      <ul className="pagination">
-        {pageNumbers.map((number, i) => (
-          <li key={number} className="pagination__item">
-            <a onClick={() => paginate(number, currentPage)} href="#" id={number} 
-            className={"pagination__link " + (i < 1 ? 'is-active' : ' ')}>
-              {number}
-            </a>
-          </li>
-        ))}
-      </ul>
-      
-      <div className="pageCount">
-        0{ currentPage } <span>|</span> 0{ pageNumbers.length }
-      </div>
-    </div>
+      <Row className="wrapper">
+        <Col>
+        </Col>
+        <Col className="text-center">
+          <ul className="paging">
+            {pageNumbers.map((number, i) => (
+              <li key={number} className="pagination__item">
+                <a onClick={() => paginate(number, currentPage)} href="#" id={number} 
+                className={"pagination__link " + (i < 1 ? 'is-active' : ' ')}>
+                  {number}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </Col>
+        <Col className="text-right">
+          <div className="pageCount">
+            <b>0{ currentPage } </b><span>|</span> 0{ pageNumbers.length }
+          </div>
+        </Col>
+      </Row>
   );
 };
 
