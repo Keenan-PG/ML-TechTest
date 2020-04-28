@@ -19,6 +19,7 @@ const Pagination = ({ postsPerPage, totalPosts, paginate, currentPage }) => {
           </li>
         ))}
       </ul>
+      
       <div className="pageCount">
         0{ currentPage } <span>|</span> 0{ pageNumbers.length }
       </div>

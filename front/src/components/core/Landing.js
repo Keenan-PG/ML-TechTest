@@ -1,4 +1,4 @@
-import React, { useState, useEffect, Component } from 'react';
+import React, { useState, useEffect } from 'react';
 // comps
 import OrderCardList from '../orders/OrderCardList'
 import Pagination from '../pagination/Pagination';
@@ -6,22 +6,41 @@ import Pagination from '../pagination/Pagination';
 import axios from 'axios';
 
 const Landing = () => {
+    // getting and setting Orders
     const [orders, setOrders] = useState([]);
+    // getting and setting Orders
+    const [orderFilter, setOrderFilter] = useState("");
     // setting defaults into component state 
     const [loading, setLoading] = useState(false);
+    // setting defaults in state
     const [currentPage, setCurrentPage] = useState(1);
     const [ordersPerPage] = useState(4);
   
+    // Effect hook - API request to orders 
     useEffect(() => {
         // async function 
         const fetchOrders = async () => {
             setLoading(true);
-            const res = await axios.get('http://localhost:8080/orders');
+            
+            // conditional to catch filter
+            let url;
+
+            if (orderFilter) {
+                url = "http://localhost:8080/orders/" + orderFilter;
+                console.log("url" + url);
+            } else {
+                url = "http://localhost:8080/orders/";
+            }
+
+            // sending request
+            const res = await axios.get(url);
+
+            // setting order list
             setOrders(res.data);
             setLoading(false);
         };
-        fetchOrders(); // invoking within hook to get return
-    }, []);
+        fetchOrders(); // invoking within hook to get return instantly
+    });
 
     // Get current orders
     const indexOfLastOrder = currentPage * ordersPerPage;
@@ -37,6 +56,30 @@ const Landing = () => {
         // add is-active class to dot which belongs to new page 
         document.getElementById(pageNumber).classList.add("is-active");
     } 
+
+    // setting orderFilter state
+    const filterOrders = (filter) => {
+        switch (filter) {
+            case 'Ready':
+                console.log('Ready');
+                setOrderFilter("Ready");
+                break;
+            case 'Coming':
+                console.log('Coming');
+                setOrderFilter("Coming");
+                break;
+            case 'Queued':
+                console.log('Queued');
+                setOrderFilter("Queued");
+                break;
+            case 'Out':
+                console.log('Out');
+                setOrderFilter("Out");
+                break;
+            default:
+                console.log('No valid status passed to orderFilter');
+        }
+    }
   
     return (
       <div>
@@ -49,19 +92,19 @@ const Landing = () => {
             </div> 
             */}
             <div className="filter-Orders">
-                <div className="order-filter">
+                <div className="order-filter" onClick={() => filterOrders("Ready")}>
                     <span className="dot ready" />
                     Ready to Try
                 </div>
-                <div className="order-filter">
+                <div className="order-filter" onClick={() => filterOrders("Coming")}>
                     <span className="dot coming" />
                     On the way
                 </div>
-                <div className="order-filter">
+                <div className="order-filter" onClick={() => filterOrders("Queued")}>
                     <span className="dot queued" />
                     In the queue
                 </div>
-                <div className="order-filter">
+                <div className="order-filter" onClick={() => filterOrders("Out")}>
                     <span className="dot out" />
                     Out of stock
                 </div>
