@@ -60,6 +60,25 @@ exports.findAll = (req, res) => {
     });
 };
 
+// Retrieve all Orders
+exports.FindByStatus = (req, res) => {
+    Order.find({ status: req.params.orderStatus })
+    .then(orders => {
+        if (!orders) {
+            res.status(404).send({
+                message: "No orders!"
+            });
+        }
+        // if no errors - send orders as response 
+        res.send(orders);
+        
+    }).catch(err => {
+        res.status(500).send({
+            message: err.message || "An error occured :-("
+        });
+    });
+};
+
 // Delete an order with orderID
 exports.deleteOne = (req, res) => {
     // storing parameter (cleaner code)

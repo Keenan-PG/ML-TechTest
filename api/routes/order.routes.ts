@@ -1,21 +1,15 @@
 module.exports = (app) => {
     const orders = require('../controllers/order.controller');
     
+    // Retrieve all Orders
+    app.get('/orders', orders.findAll);
+
+    // Find an order via status
+    app.get('/orders/:orderStatus', orders.FindByStatus);
+    
     // Create a new Order
     app.post('/orders', orders.createOne);
     
-    // Retrieve all Orders
-    app.get('/orders', orders.findAll);
-    
     // Delete a Order with orderID
     app.delete('/orders/:orderId', orders.deleteOne);
-
-
-    // potential additions:
-    
-    // Update an Order with orderID
-    // app.put('/notes/:orderId', orders.update);
-
-    // Retrieve a list of Orders with status - depends whether I want front end or back end to do heavy lifting on that? can just 'Disable' on FE? Revisit.
-    // app.get('/notes/:orderStatus', orders.filterByStatus);
 }
