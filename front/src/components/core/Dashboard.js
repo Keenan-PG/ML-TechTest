@@ -86,13 +86,13 @@ const Dashboard = () => {
     return (
       <div>
         <div className="layout-Header">
-            {/* 
-            <div className="add-Order">
+            
+            {/* <div className="add-Order">
                 <button className="btn">
                     Add New <span>+</span>
                 </button>
-            </div> 
-            */}
+            </div>  */}
+           
             <FilterOrders filterOrders={filterOrders} />
         </div>
         <OrderCardList orders={currentOrders} loading={loading} className="layout-OrderCards" />

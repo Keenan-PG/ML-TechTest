@@ -179,7 +179,7 @@ label {
 
 .order-card {
   display: flex;
-  margin: 1rem 0rem;
+  margin-bottom: 1rem;
   font-size: 1.2rem;
   line-height: 1.25rem;
 }

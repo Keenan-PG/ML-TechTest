@@ -4,7 +4,6 @@ import PropTypes from 'prop-types';
 const OrderCard = (props) => {
     // mapping given props to order object and setting defaults
     const {
-        orderID = null,
         img_url = '',
         product_name = '',
         category = '',
@@ -51,7 +50,6 @@ const OrderCard = (props) => {
 // setting prop types 
 OrderCard.propTypes = {
     order: PropTypes.shape({
-        orderID: PropTypes.number.isRequired,
         img_url: PropTypes.string.isRequired,
         product_name: PropTypes.string.isRequired,
         category: PropTypes.string.isRequired,
