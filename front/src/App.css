@@ -116,7 +116,7 @@ label {
   justify-content: space-between;
   height: 100%;
   max-height: 10vh;
-  padding: 0.5rem 0rem;
+  padding-bottom: 1.5rem;
 }
 
 .add-Order {
@@ -293,8 +293,9 @@ label {
 }
 
 .paging {
-  margin: 0; 
-  padding: 0.5rem 0rem;
+  margin: 0;
+  padding: 1rem 0rem;
+  margin-block-start: 0;
 }
 
 .pagination__item {
